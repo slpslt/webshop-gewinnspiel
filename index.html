@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛍️ Webshop - Phase 1 Prototyp</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">🛍️ MyShop</h1>
+                <nav class="nav">
+                    <button class="nav-link active" data-filter="all">Alle Produkte</button>
+                    <button class="nav-link" data-filter="elektronik">Elektronik</button>
+                    <button class="nav-link" data-filter="kleidung">Kleidung</button>
+                    <button class="nav-link" data-filter="bucher">Bücher</button>
+                </nav>
+                <button class="cart-button" id="cartBtn">
+                    🛒 Warenkorb <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Produkt-Katalog -->
+        <section class="products-section">
+            <div class="container">
+                <h2>Unsere Produkte</h2>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Produkte werden hier eingefügt (JavaScript) -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Warenkorb Modal -->
+        <div class="modal" id="cartModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>🛒 Dein Warenkorb</h2>
+                    <button class="close-btn" id="closeCartBtn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems">
+                        <!-- Warenkorb-Items werden hier eingefügt -->
+                    </div>
+                    <div id="emptyCartMessage" class="empty-message">
+                        Dein Warenkorb ist leer 😢
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="cart-summary">
+                        <p><strong>Summe:</strong> <span id="cartTotal">€0,00</span></p>
+                    </div>
+                    <button class="btn btn-primary" id="checkoutBtn">Zur Kasse</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 MyShop. Alle Rechte vorbehalten. | Phase 1 Prototyp</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
